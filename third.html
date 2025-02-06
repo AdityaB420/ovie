@@ -123,6 +123,7 @@ Yours, Forever & Always 💞
                 if (distance < 0) {
                     clearInterval(x);
                     document.getElementById("timer").innerHTML = "Time's up! 🎉 Check your surprise!";
+                    document.getElementById("surpriseButton").style.display = "block";
                     const surpriseButton = document.getElementById('surpriseButton');
                     surpriseButton.classList.add('active');
                 }
