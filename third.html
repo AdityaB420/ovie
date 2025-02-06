@@ -17,6 +17,7 @@
             justify-content: center;
             align-items: center;
         }
+        
         .container {
             background: rgba(255,255,255,0.9);
             border-radius: 20px;
@@ -86,13 +87,18 @@ So, keep that beautiful smile on, because something amazing is coming just for y
 Yours, Forever & Always 💞
         </div>
         <p id="timer"></p>
+        <button id="surpriseButton" class="surprise-button" style="display: none;"  onclick="window.location.href='fourth.html'" >
+            Click for Your Surprise! 💝
+        </button>
         <audio id="backgroundMusic" loop>
-            <source src="/gift.mpeg" type="audio/mpeg">
+            <source src="/music.mp3" type="audio/mpeg">
         </audio>
     </div>
 
     <script>
         // Rose animation
+
+        
 
         function getNextDayNoon() {
             let now = new Date();
@@ -117,6 +123,8 @@ Yours, Forever & Always 💞
                 if (distance < 0) {
                     clearInterval(x);
                     document.getElementById("timer").innerHTML = "Time's up! 🎉 Check your surprise!";
+                    const surpriseButton = document.getElementById('surpriseButton');
+                    surpriseButton.classList.add('active');
                 }
             }, 1000);
         }
